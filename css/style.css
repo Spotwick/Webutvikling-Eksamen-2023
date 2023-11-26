@@ -1,0 +1,19 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#grid-container {
+    display: grid;
+
+}
+
+@media only screen and (min-width: 600px) {
+    #grid-container {
+        grid-template-areas: 
+            "header-left header-right"
+            "main main main" 
+            "footer footer footer";
+    }
+
+}
