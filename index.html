@@ -9,31 +9,122 @@
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
     <link href="css/font/css/brands.css" rel="stylesheet">
     <link href="css/font/css/solid.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <!-- Inkluderer nettstedets egen stilark -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <title>Bolleoppskrifter</title>
+    <title>Forside</title>
 </head>
 <body>
-    <div id="grid-container">
-        <header>
+    <div id="grid-container-index">
+        <header id="header">
             <section class="header-left">
                 <a href="index.html">
-                    <img src="img/logo1.png" alt="Logo of website">
+                    <img src="img/logo1.png" height="130" alt="Logo of website">
                 </a>
             </section>
 
             <nav class="header-right">
-                <a href="index.html">Home</a>
+                <a href="index.html" class="nav-active">Home</a>
                 <a href="products.html">Portfolio</a>
                 <a href="about.html">About</a>
                 <a href="about.html" class="button-contact">Contact</a>
             </nav>
-
-
-        
-
-
         </header>
+        <main>
+            <section class="header-movie">
+                <video autoplay muted loop id="video-mountains">
+                    <source src="img/mountains.mp4" type="video/mp4">
+                </video>
+                <section class="movie-text">
+                    <h1>Compeling headline</h1>
+                    <p>
+                        Vivamus scelerisque arcu ut lobortis varius. 
+                        Donec ut egestas massa, ut pretium sapien. 
+                        Ut quis ipsum fermentum, suscipit libero id, maximus ligula. 
+                        Integer vel nunc lobortis, fringilla nisl ac, fringilla. 
+                    </p>
+                    <a href="#" class="movie-button">Read more about our services</a>
+                </section>
+            </section>
+            <section class="engaging">
+                <h2>Engaging suheading. What can you help your visitors with</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Praesent quis dui vitae justo iaculis malesuada. 
+                    Proin egestas at nulla et aliquam. 
+                    Pellentesque cursus sem quis fermentum suscipit. 
+                    In at justo sed nunc cursus aliquam porta id metus. 
+                    Etiam tincidunt fringilla diam, sed vehicula velit dictum in. 
+                    Morbi egestas sollicitudin luctus. Curabitur iaculis sapien nunc, 
+                </p>
+            </section>
+            <article class="about-company">
+                <img src="https://placehold.co/400x400" alt="placeholder image">
+                <section id="about-company-text">
+                    <h4>About Our Company</h4>
+                    <p>
+                        Donec aliquam feugiat risus nec pellentesque. 
+                        Aliquam erat volutpat. Vivamus neque leo, egestas in ipsum at, malesuada sodales turpis. 
+                        Quisque eleifend quam malesuada, consequat augue id, dignissim dolor. 
+                        Quisque a elit non ligula pharetra finibus sed id dolor. 
+                        In accumsan eros sed ante lacinia, at bibendum mauris blandit. Ut laoreet volutpat est sed sollicitudin. 
+                        Nunc ullamcorper enim et arcu egestas pulvinar. 
+                        Maecenas suscipit sagittis neque, ut rutrum urna blandit sed. Etiam dapibus tempus mi sit amet bibendum. 
+                    </p>
+                    <a href="#" id="read-more-button">Read more about us</a>
+                </section>
+
+            </article>
+            <section class="our-services">
+                <h2>Our Services</h2>
+                <section id="services">
+                    <section class="service">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Branding</h3>
+                        <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    </section>
+                    <section class="service">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h3>Branding</h3>
+                        <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    </section>
+                    <section class="service">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Branding</h3>
+                        <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    </section>
+                    <section class="service">
+                        <i class="fa-solid fa-wifi"></i>
+                        <h3>Branding</h3>
+                        <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="newsletter">
+                <h2>Sign up for our newsletter</h2>
+                <input type="email" name="email" placeholder="Nora@epost.no" id="input-email">
+                <a href="" id="signup-button">Sign me up!</a>
+            </section>
+        </main>
+
+        <!-- https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+        <a href="#header" class="jump-up" aria-label="Jump to top button" title="Jump to top"><i class="fa-solid fa-arrow-up"></i></a>  
+
+
+        <footer>
+            <img src="img/logo1.png" height="100" alt="Logo of website">
+            <span>Companyrights Companyname 2023</span>
+            <section id="sosiale-medier">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </section>
+        </footer>
+
 
     </div>
 </body>
