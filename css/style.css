@@ -432,10 +432,6 @@ footer {
         background-color: var(--grasvart);
     }
 
-    #contact-us {
-        text-align: center;
-    }
-
     .clients-box {
         display: flex;
         flex-direction: column;
