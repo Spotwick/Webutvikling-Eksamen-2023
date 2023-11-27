@@ -276,6 +276,7 @@ footer {
 
     #sosiale-medier i{
         padding-left: 1rem;
+        color: var(--hvit);
     }
 
     .jump-up{
@@ -431,6 +432,10 @@ footer {
         background-color: var(--grasvart);
     }
 
+    #contact-us {
+        text-align: center;
+    }
+
     .clients-box {
         display: flex;
         flex-direction: column;
@@ -451,15 +456,86 @@ footer {
     .client {
         padding:0rem 1rem;
     }
+
+    .contact-us-area {
+        background-color: rgb(235, 235, 235);
+        margin-top: 0;
+        padding: 2rem;
+    }
+
+    .contact-us-area h2 {
+        text-align: center;
+        margin-top: 0;
+    }
     
     .contact-us-box {
         display: flex;
         flex-direction: row;
+        max-width: 70%;
+        /* Chatgpt ga meg tipset margin: 0 auto; for å sentrer innholdet horisontalt */
+        margin: 0 auto;
     }
 
     .input-contact-info {
         display: flex;
         flex-direction: column;
+        margin: 0rem 2rem;
+    }
+
+    .contact-us-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-us-info h4{
+        margin-bottom: 0;
+    }
+
+    .contact-us-info span i{
+        color: var(--grasvart);
+        padding-right: 1rem;
+    }
+
+    .contact-us-info span {
+        margin: 0rem 2rem 1rem 0rem;
+    }
+
+    .contact-us-info span a{
+        text-decoration: underline;
+        color: blue;
+    }
+
+    .input-text {
+        border-style: none;
+        min-height: 2rem;
+        min-width: 25rem;
+    }
+
+    .input-header {
+        padding: 0.2rem 0rem;
+    }
+
+    .input-message {
+        border-style: none;
+        min-height:10rem;
+        min-width: 25rem;
+        max-width: 25rem;
+        
+    }
+
+    #send-button{
+        background-color: var(--gull);
+        color: var(--svart);
+        padding: 15px 20px;
+        width: fit-content;
+        text-decoration: none;
+        margin-top: 1rem;
+        font-weight: bold;
+    }
+
+    #send-button:hover {
+        color: var(--gull);
+        background-color: var(--grasvart);
     }
 
 

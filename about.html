@@ -30,7 +30,7 @@
                 <a href="index.html">Home</a>
                 <a href="products.html">Portfolio</a>
                 <a href="about.html" class="nav-active">About</a>
-                <a href="about.html" class="button-contact">Contact</a>
+                <a href="#contact-us" class="button-contact">Contact</a>
             </nav>
 
         </header>
@@ -86,51 +86,47 @@
                     <img src="img/logo2.png" class="client" height="150" width="150" alt="logo, client 2">
                     <img src="img/logo3.png" class="client" height="150" width="150" alt="logo, client 3">
                 </section>
-               
             </section>
 
+            <!-- Bruker div, fordi den er bare for posisjonering av elementene innenfor -->
+            <div class="contact-us-area" id="contact-us">
+                <h2>Contact us</h2>
+                <section class="contact-us-box">
+                    <section class="input-contact-info">
+                        <h4>Send us a message</h4>
+                        <span class="input-header">Name</span>
+                        <input type="text" name="name" placeholder="Ola Nordmann..." class="input-text">
+                        <span class="input-header">Subject</span>
+                        <input type="text" name="subject" placeholder="Branding..." class="input-text">
+                        <span class="input-header">Message</span>
+                        <!--Inspirert av textarea guide på w3schools -->
+                        <textarea type="text" name="Message" class="input-message"></textarea>
+                        <a href="" id="send-button">Send message</a>
+                    </section>
 
-            <h2>Contact us</h2>
-            <section class="contact-us-box">
-                <section class="input-contact-info">
-                    <h4>Send us a message</h4>
-                    <span>name</span>
-                    <input type="text" name="name" placeholder="Ola Nordmann" class="input-text">
-                    <span>Subject</span>
-                    <input type="text" name="subject" placeholder="Branding" class="input-text">
-                    <span>Message</span>
-                    <input type="text" name="Message" placeholder="Branding" class="input-message">
-                    <a href="" id="send-button">Send message</a>
+                    <article class="contact-us-info">
+                        <h4>Contact information</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Praesent nec quam ac velit dapibus varius in vitae turpis.
+                            Praesent vulputate nunc vitae blandit tempor. 
+                            Morbi lorem dui, pulvinar ut felis sit amet, 
+
+                        </p>
+                        <span><i class="fa-solid fa-location-pin"></i> B R A Veien 4, 1757 Halden</span>
+                        <span><i class="fa-solid fa-phone"></i>69 60 80 00</span>
+                        <span><i class="fa-solid fa-envelope"></i><a href="postmottak@hiof.no">postmottak@hiof.no</a></span>
+                    </article>
                 </section>
-                <article>
-                    <h4>Contact information</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                         Praesent nec quam ac velit dapibus varius in vitae turpis.
-                         Praesent vulputate nunc vitae blandit tempor. 
-                         Morbi lorem dui, pulvinar ut felis sit amet, 
-                         tempor porttitor leo. Sed eleifend eleifend nulla, 
-                         sed ultrices augue pretium sed. Nulla pretium nisi ante, 
-                         vestibulum convallis magna consectetur ut.
-                    </p>
-                    <span><i class="fa-solid fa-location-pin"></i> B R A Veien 4, 1757 Halden</span>
-                    <span><i class="fa-solid fa-phone"></i>69 60 80 00</span>
-                    <span><i class="fa-solid fa-envelope"></i>postmottak@hiof.no</span>
-                </article>
+            </div>
+
+            <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.2104093292894!2d11.349786677817116!3d59.12887992704898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f6cf4d491d%3A0xdd127f6ec81a545d!2sB%20R%20A%20Veien%204%2C%201783%20Halden!5e0!3m2!1sen!2sno!4v1701102574477!5m2!1sen!2sno" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
 
+            
 
-
-
-
-
-
-
-
-
-
-
-           
+  
         </main>
 
         <!-- https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
@@ -141,9 +137,15 @@
             <img src="img/logo1.png" height="100" alt="Logo of website">
             <span>Companyrights Companyname 2023</span>
             <section id="sosiale-medier">
-                <i class="fa-brands fa-square-facebook"></i>
-                <i class="fa-brands fa-square-instagram"></i>
-                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.facebook.com/" aria-label="Facebook icon">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/" aria-label="Instagram icon">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/" aria-label="Linkedin icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
             </section>
         </footer>
 
