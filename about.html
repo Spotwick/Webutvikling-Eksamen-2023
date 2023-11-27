@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <!-- Inkluderer ikon-stiler for ikoner fra FontAwesome -->
+    <link href="css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="css/font/css/brands.css" rel="stylesheet">
+    <link href="css/font/css/solid.css" rel="stylesheet">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <!-- Inkluderer nettstedets egen stilark -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Home page</title>
+</head>
+<body>
+    <div id="grid-container-index">
+        <header id="header">
+            <section class="header-left">
+                <a href="index.html">
+                    <img src="img/logo1.png" height="130" alt="Logo of website">
+                </a>
+            </section>
+
+            <nav class="header-right">
+                <a href="index.html">Home</a>
+                <a href="products.html">Portfolio</a>
+                <a href="about.html" class="nav-active">About</a>
+                <a href="about.html" class="button-contact">Contact</a>
+            </nav>
+
+        </header>
+        <main>
+            <section class="header-with-box">
+                <img src="img/portfolio-header.jpg" alt="overview of desk" class="header-media-about">
+                <section class="about-paragraph">
+                    <span>Company name</span>
+                    <h3>About our company</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Praesent nec quam ac velit dapibus varius in vitae turpis. 
+                        Praesent vulputate nunc vitae blandit tempor. Morbi lorem dui, 
+                        pulvinar ut felis sit amet, tempor porttitor leo. 
+                        Sed eleifend eleifend nulla, sed ultrices augue pretium sed. 
+                        Nulla pretium nisi ante, vestibulum convallis magna consectetur ut. 
+                        In sit amet commodo nisi. Ut imperdiet laoreet laoreet. 
+                    </p>
+                    <a href="#services" class="get-intouch-button">Get in touch with us!</a>
+                </section>
+            </section>
+
+            <section class="our-services">
+                <h2>Our Services</h2>
+                <section id="services">
+                    <section class="service">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>Branding</h3>
+                        <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    </section>
+                    <section class="service">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h3>Branding</h3>
+                        <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    </section>
+                    <section class="service">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Branding</h3>
+                        <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    </section>
+                    <section class="service">
+                        <i class="fa-solid fa-wifi"></i>
+                        <h3>Branding</h3>
+                        <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                    </section>
+                </section>
+            </section>
+
+            <section class="clients-box">
+                <h2>Some of our clients</h2>
+                <section class="clients">
+                    <img src="img/logo1.png" class="client" height="150" width="150" alt="logo, client 1">
+                    <img src="img/logo2.png" class="client" height="150" width="150" alt="logo, client 2">
+                    <img src="img/logo3.png" class="client" height="150" width="150" alt="logo, client 3">
+                </section>
+               
+            </section>
+
+
+            <h2>Contact us</h2>
+            <section class="contact-us-box">
+                <section class="input-contact-info">
+                    <h4>Send us a message</h4>
+                    <span>name</span>
+                    <input type="text" name="name" placeholder="Ola Nordmann" class="input-text">
+                    <span>Subject</span>
+                    <input type="text" name="subject" placeholder="Branding" class="input-text">
+                    <span>Message</span>
+                    <input type="text" name="Message" placeholder="Branding" class="input-message">
+                    <a href="" id="send-button">Send message</a>
+                </section>
+                <article>
+                    <h4>Contact information</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                         Praesent nec quam ac velit dapibus varius in vitae turpis.
+                         Praesent vulputate nunc vitae blandit tempor. 
+                         Morbi lorem dui, pulvinar ut felis sit amet, 
+                         tempor porttitor leo. Sed eleifend eleifend nulla, 
+                         sed ultrices augue pretium sed. Nulla pretium nisi ante, 
+                         vestibulum convallis magna consectetur ut.
+                    </p>
+                    <span><i class="fa-solid fa-location-pin"></i> B R A Veien 4, 1757 Halden</span>
+                    <span><i class="fa-solid fa-phone"></i>69 60 80 00</span>
+                    <span><i class="fa-solid fa-envelope"></i>postmottak@hiof.no</span>
+                </article>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+           
+        </main>
+
+        <!-- https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+        <a href="#header" class="jump-up" aria-label="Jump to top button" title="Jump to top"><i class="fa-solid fa-arrow-up"></i></a>  
+
+
+        <footer>
+            <img src="img/logo1.png" height="100" alt="Logo of website">
+            <span>Companyrights Companyname 2023</span>
+            <section id="sosiale-medier">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </section>
+        </footer>
+
+
+    </div>
+</body>
