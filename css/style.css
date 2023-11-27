@@ -78,7 +78,7 @@ footer {
     header {
         flex-direction: right;
         justify-content: space-between;
-        margin: 1rem;
+        margin: 2rem 1rem;
     }
 
     .header-left {
@@ -155,6 +155,7 @@ footer {
         margin-right: auto;
         margin-left: auto;
         margin-top: 5rem;
+        margin-bottom: 2rem;
     }
 
     .engaging h2{
@@ -219,6 +220,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        padding-bottom: 2rem;
     }
 
     .service p { 
@@ -260,7 +262,7 @@ footer {
         align-items: center;
         color: var(--hvit);
         background-color: var(--grasvart);
-        padding: 3rem 0.5rem;
+        padding: 4rem 0.5rem;
     }
 
     #sosiale-medier {
