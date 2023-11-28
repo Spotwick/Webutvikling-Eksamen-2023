@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadata -->
+    <meta name="description" content="Welcome to the home page of our amazing company. Here we will show you what we offer to all our incredible customers">
+    <meta name="keywords" content="Company, Branding, People, Connect">
+    <meta name="author" content="Company name">
+
+    <!-- Opengraph -->
+    <meta property="og:title" content="Company name">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="127.0.0.1">
+    <meta name="og:description" content="Home page of this amazing company, welcome.">
+    <!-- Samme bildet som portfolio bildene, fra pixabay -->
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2017/10/12/22/17/business-2846221_960_720.jpg">
+
+
     <!-- Inkluderer en stilark for normalisering for å sikre at nettstedet ser likt ut på alle nettlesere -->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
     <!-- Inkluderer ikon-stiler for ikoner fra FontAwesome -->
@@ -25,6 +39,7 @@
         <header id="header">
             <section class="header-left">
                 <a href="index.html">
+                    <!-- Nødvendig bildet for å vise nettside logo -->
                     <img src="img/logo1.png" height="130" alt="Logo of website">
                 </a>
             </section>
@@ -33,15 +48,21 @@
                 <a href="index.html" class="nav-active">Home</a>
                 <a href="products.html">Portfolio</a>
                 <a href="about.html">About</a>
-                <a href="about.html#contact-us" class="button-contact">Contact</a>
+                <a href="about.html#contact-us" class="button-contact" role="button">Contact</a>
             </nav>
         </header>
         <main>
             <section class="header-movie">
-                <video autoplay muted loop class="header-media" id="header-mountains">
+                <video autoplay muted loop class="header-media" id="header-mountains" itemscope itemtype="https://schema.org/VideoObject">
+                    <!-- micro data om videoen-->
+                    <meta itemprop="name" content="paragliding over mountains">
+                    <meta itemprop="uploadDate" content="2023-11-22">
+                    <meta itemprop="thumbnailUrl" content="mountains.jpg">
                     <source src="img/mountains.mp4" type="video/mp4">
                 </video>
-                <img src="img/portfolio-header.jpg" alt="overview of desk" class="header-media" id="header-image">
+                <!-- Tom alt, fordi dekorativt bildet. legger også til aria-hidden til true -->
+
+                <img src="img/portfolio-header.jpg" alt="" class="header-media" id="header-image" aria-hidden="true">
                 <section class="movie-text">
                     <h1>Compeling headline</h1>
                     <p>
@@ -50,7 +71,7 @@
                         Ut quis ipsum fermentum, suscipit libero id, maximus ligula. 
                         Integer vel nunc lobortis, fringilla nisl ac, fringilla. 
                     </p>
-                    <a href="#services" class="movie-button">Read more about our services</a>
+                    <a href="#services" class="movie-button" role="button">Read more about our services</a>
                 </section>
             </section>
             <section class="engaging">
@@ -66,6 +87,7 @@
                 </p>
             </section>
             <article class="about-company">
+                <!-- Nødvendig bildet, derfor har den alt tekst -->
                 <img src="https://placehold.co/400x400" alt="placeholder image">
                 <section id="about-company-text">
                     <h4>About Our Company</h4>
@@ -86,50 +108,54 @@
                 <h2>Our Services</h2>
                 <section id="services">
                     <section class="service">
-                        <i class="fa-solid fa-users"></i>
+                        <!-- Nødvendig ikon for å vise tematikk -->
+                        <i class="fa-solid fa-users" aria-label="Users icon"></i>
                         <h3>Branding</h3>
                         <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
                     </section>
                     <section class="service">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <!-- Nødvendig ikon for å vise tematikk -->
+                        <i class="fa-solid fa-cloud-arrow-up" aria-label="upload icon"></i>
                         <h3>Branding</h3>
                         <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
                     </section>
                     <section class="service">
-                        <i class="fa-solid fa-code"></i>
+                        <!-- Nødvendig ikon for å vise tematikk -->
+                        <i class="fa-solid fa-code" aria-label="A service icon"></i>
                         <h3>Branding</h3>
                         <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
                     </section>
                     <section class="service">
-                        <i class="fa-solid fa-wifi"></i>
+                        <!-- Nødvendig ikon for å vise tematikk -->
+                        <i class="fa-solid fa-wifi" aria-label="wifi icon"></i>
                         <h3>Branding</h3>
                         <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
                     </section>
                 </section>
             </section>
 
-            <section class="newsletter">
-                <h2>Sign up for our newsletter</h2>
-                <input type="email" name="email" placeholder="Nora@epost.no" id="input-email">
-                <a href="" id="signup-button">Sign me up!</a>
+            <section class="newsletter" role="form" itemscope itemtype="http://schema.org/SubscribeAction">
+                <h2 itemprop="name">Sign up for our newsletter</h2>
+                <input type="email" name="email" placeholder="Nora@epost.no" id="input-email" aria-label="Email for newsletter" title="Enter email address" itemprop="agent">
+                <a href="" id="signup-button" itemprop="instrument">Sign me up!</a>
             </section>
         </main>
 
         <!-- https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
-        <a href="#header" class="jump-up" aria-label="Jump to top button" title="Jump to top"><i class="fa-solid fa-arrow-up"></i></a>  
+        <a href="#header" class="jump-up" aria-label="Jump to top button" role="button" title="Jump to top"><i class="fa-solid fa-arrow-up"></i></a>  
 
 
         <footer>
-            <a href="index.html"><img src="img/logo1.png" height="100" alt="Logo of website"></a>
+            <a href="index.html" title="Go to home page"><img src="img/logo1.png" height="100" alt="Logo of website"></a>
             <span>Companyrights Companyname 2023</span>
-            <section id="sosiale-medier">
-                <a href="https://www.facebook.com/" aria-label="Facebook icon">
+            <section id="sosiale-medier" aria-label="Social media icons">
+                <a href="https://www.facebook.com/" aria-label="Facebook icon" title="Visit our Facebook page">
                     <i class="fa-brands fa-square-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/" aria-label="Instagram icon">
+                <a href="https://www.instagram.com/" aria-label="Instagram icon" title="Visit our Instagram page">
                     <i class="fa-brands fa-square-instagram"></i>
                 </a>
-                <a href="https://www.linkedin.com/" aria-label="Linkedin icon">
+                <a href="https://www.linkedin.com/" aria-label="Linkedin icon" title="Visit our LinkedIn page">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </section>
