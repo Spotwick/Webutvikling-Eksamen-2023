@@ -682,6 +682,7 @@ footer a{
         border-width: 3px;
         font-weight: bold;
         padding: 0.8rem 1rem;
+        width: fit-content;
         
     }
 
