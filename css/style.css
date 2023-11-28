@@ -348,7 +348,9 @@ footer a{
     margin: 2rem;
     flex-direction: column;
     flex-grow: 1;
-    max-width: 692px;
+    /* Setter max width til 629, siden 629*(1.1) = 692. Da vil den ikke vokse over 692 */
+    max-width: 629px;
+    min-width: 200px;
     transition: 1.5s;
 }
 
@@ -458,7 +460,6 @@ footer a{
     max-width: 100%;
     /* Chatgpt ga meg tipset margin: 0 auto; for å sentrer innholdet horisontalt */
     margin: 0 auto;
-
 }
 
 .input-contact-info {
@@ -736,6 +737,4 @@ footer a{
         background-color: var(--grasvart);
     }
 
-
-    
 }
