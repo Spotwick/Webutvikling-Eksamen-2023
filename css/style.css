@@ -13,13 +13,19 @@ body {
     justify-content: center;
 }
 
-#grid-container-index {
+main h2{
+    font-size: 1.7rem;
+}
+
+#grid-container {
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    min-width: 1000px;
     max-width: 1600px;
     justify-content: center;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
 }
 
 a {
@@ -27,11 +33,28 @@ a {
     color: #000;
 }
 
+/* Legger elementene under hverandre på mobil versjon */
 header {
     display: flex;
+    flex-direction: column;
     font-size: 1.3rem;
     font-weight: 400;
     grid-area: header;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.header-right {
+    display: inherit;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    justify-content: space-around;
+}
+
+.header-right a{
+    margin: 0.5rem;
+    text-align: center;
 }
 
 .nav-active {
@@ -51,11 +74,6 @@ header {
     font-weight: bold;
 }
 
-.button-contact:hover {
-    color: var(--gull);
-    background-color: var(--grasvart);
-}
-
 main{
     grid-area: main;
 }
@@ -65,15 +83,439 @@ footer {
 }
 
 
+.header-movie {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-media {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    opacity: 40%;
+    padding-bottom: 2rem;
+    
+}
+
+#header-mountains {
+    display: none;
+}
+
+
+/* Tips fra chatgpt, bruker left, top og translate(left, top) for å sentrere innholdet perfekt */
+.movie-text {
+    display: flex;
+    position: relative;
+    color: var(--svart);
+    text-align: center;
+    max-width: 60%;
+    flex-direction: column;
+    font-weight: 400;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.movie-text h1{
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.movie-button {
+    background-color: var(--gull);
+    color: var(--svart);
+    padding: 15px 20px;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.jump-up{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    background-color: var(--grasvart);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.jump-up i{
+    color: white;
+}
+
+/*------Index------*/
+
+.engaging {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.engaging h2{
+    font-size: 2.5rem;
+}
+
+.engaging p{
+    font-size: large;
+}
+
+.about-company{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gull);
+    padding: 2rem;
+    align-items: center;
+}
+
+#about-company-text {
+    margin: 1rem;
+    max-width: 70%;
+    padding-left: 1rem;
+}
+
+#about-company-text h4{
+    font-size: large;
+    font-weight: 750;
+}
+
+#about-company-text p {
+    padding-bottom: 1rem;
+}
+
+#read-more-button {
+    display: flex;
+    border-color: var(--grasvart);
+    border-style: solid;
+    border-width: 3px;
+    font-weight: bold;
+    padding: 0.8rem 1rem;
+    font-size: large;
+}
+
+
+.our-services {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Hver service vil wrappe nedover ved mindre skjerm vidder */
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    min-width: 20rem;
+}
+
+.service p { 
+    text-align: center;
+}
+
+.service i {
+    font-size: 2rem;
+}
+
+.newsletter{
+    background-color: rgb(243, 243, 243);
+    padding-top: 0.5rem; 
+    padding-bottom: 2rem ;
+    text-align: center; 
+}
+
+#input-email {
+    border-style: none;
+    min-height: 3rem;
+}
+
+#signup-button {
+    background-color: var(--gull);
+    border-style: none;
+    border-radius: 0;
+    padding: 1rem;
+    min-height: 3rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--hvit);
+    background-color: var(--grasvart);
+    padding: 3rem 0rem 1rem 0rem;
+}
+
+footer a{
+    padding-bottom: 1.5rem;
+}
+
+#sosiale-medier {
+    font-size: 2rem;
+}
+
+#sosiale-medier i{
+    margin: 1rem 0.5rem;
+    color: var(--hvit);
+}
+
+
+
+/*------Portfolio------*/
+
+.portfolio-h1 {
+    position: absolute;
+    color: var(--svart);
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 9rem;
+}
+
+.portfolio-h1 h1 {
+    font-size: 3rem;
+}
+
+.header-with-line {
+    margin: 1rem 2rem;
+    border-bottom: var(--gull);
+    height: 3.5rem;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+.jump-to-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+.jump-button {
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--grasvart);
+    margin: 0rem 1rem 0rem 0rem;
+    padding: 0.5rem 0.5rem;
+    max-width: fit-content;
+}
+
+.multiple-showcases {
+    display: flex;
+    margin: 2rem;
+    flex-wrap: wrap;
+    
+}
+
+/* Bruker flex-grow slik at boksene vokser til å fylle ut fritt rom. Legger til en max vidde,
+ og en transition, slik at det tar litt tid for at boksen vokser når du hovrer over */
+.showcase {
+    display: flex;
+    margin: 2rem;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 692px;
+    transition: 1.5s;
+}
+
+.showcase span {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+
+
+/*------About------ */
+
+.header-with-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 35rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    text-align: left;
+
+}
+
+.header-media-about {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-paragraph {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    color: var(--svart);
+    width: 50%;
+    height: 25rem;
+    background-color: var(--hvit);
+    opacity: 85%;
+    padding: 0rem 1rem;
+    margin-right: 5rem;
+    margin-left: 2rem;
+    padding: 2rem;
+}
+
+.about-paragraph h3 {
+    font-size: 1.5rem;
+}
+
+.get-intouch-button {
+    
+    background-color: var(--gull);
+    color: var(--svart);
+    padding: 15px 20px;
+    width: fit-content;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+    
+}
+
+.clients-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: var(--gull);
+}
+
+.clients {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.client {
+    display: flex;
+    padding:1rem 1rem;
+    width: 10rem;
+}
+
+.contact-us-area {
+    background-color: rgb(235, 235, 235);
+    margin-top: 0;
+    padding: 0rem;
+    width: auto;
+}
+
+.contact-us-area h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.contact-us-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    /* Chatgpt ga meg tipset margin: 0 auto; for å sentrer innholdet horisontalt */
+    margin: 0 auto;
+
+}
+
+.input-contact-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 1rem;
+}
+
+.contact-us-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 1rem;
+}
+
+.contact-us-info h4{
+    margin-bottom: 0;
+}
+
+.contact-us-info span i{
+    color: var(--grasvart);
+    padding-right: 1rem;
+}
+
+.contact-us-info span {
+    margin: 0rem 2rem 1rem 0rem;
+}
+
+.contact-us-info span a{
+    text-decoration: underline;
+    color: blue;
+}
+
+.input-text {
+    border-style: none;
+    min-height: 2rem;
+    min-width: 2rem;
+}
+
+.input-header {
+    padding: 0.2rem 0rem;
+}
+
+.input-message {
+    border-style: none;
+    min-height: 10rem;
+}
+
+
+#send-button{
+    background-color: var(--gull);
+    color: var(--svart);
+    padding: 15px 20px;
+    width: fit-content;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
 @media only screen and (min-width: 600px) {
+
+    /* -------Generelt------ */
 
     main h2{
         font-size: 2.5rem;
     }
 
 
-    #grid-container-index {
-        grid-template-columns: 1fr 1fr 1fr;
+    #grid-container {
         grid-template-areas: 
             "header header header"
             "main main main"
@@ -81,7 +523,7 @@ footer {
     }
     
     header {
-        flex-direction: right;
+        flex-direction: row;
         justify-content: space-between;
         margin: 2rem 1rem;
     }
@@ -89,12 +531,12 @@ footer {
     .header-left {
         display: flex;
         align-items: center;
-
     }
 
     .header-right {
         display: flex;
         align-items: center;
+        flex-direction: row;
     }
 
     .header-right a{
@@ -117,6 +559,16 @@ footer {
         height: 100%;
         object-fit: cover;
         opacity: 40%;
+    }
+
+    /* Display mountains video for desktop */
+    #header-mountains {
+        display: block;
+    }
+
+    /* Turn off regular header image when in desktop */
+    #header-image {
+        display: none;
     }
     
     .movie-text {
@@ -150,6 +602,25 @@ footer {
         background-color: var(--grasvart);
         color: var(--gull);
     }
+
+    .jump-up{
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        background-color: var(--grasvart);
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    .jump-up i{
+        color: white;
+    }
+
+    /*------Index------*/
 
     .engaging {
         flex-direction: column;
@@ -263,11 +734,17 @@ footer {
 
     footer {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         color: var(--hvit);
         background-color: var(--grasvart);
         padding: 4rem 0.5rem;
+    }
+
+    /* Sentrer logo for desktop */
+    footer a{
+        padding: 0;
     }
 
     #sosiale-medier {
@@ -277,23 +754,6 @@ footer {
     #sosiale-medier i{
         padding-left: 1rem;
         color: var(--hvit);
-    }
-
-    .jump-up{
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 99;
-        border: none;
-        background-color: var(--grasvart);
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 5px;
-        font-size: 18px;
-    }
-
-    .jump-up i{
-        color: white;
     }
 
 
@@ -443,10 +903,11 @@ footer {
     .clients {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         margin-top: 2rem;
         margin-bottom: 2rem;
-
+        align-items: center;
     }
 
     .client {
@@ -468,8 +929,7 @@ footer {
         display: flex;
         flex-direction: row;
         max-width: 70%;
-        /* Chatgpt ga meg tipset margin: 0 auto; for å sentrer innholdet horisontalt */
-        margin: 0 auto;
+        justify-content: center;
     }
 
     .input-contact-info {

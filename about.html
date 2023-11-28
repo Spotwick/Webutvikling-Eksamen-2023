@@ -20,7 +20,8 @@
     <link rel="icon" type="image/x-icon" href="img/logo1.png">
 </head>
 <body>
-    <div id="grid-container-index">
+    <!-- Bruker en div for å holde på grid containeren til siden-->
+    <div id="grid-container">
         <header id="header">
             <section class="header-left">
                 <a href="index.html">
@@ -84,9 +85,9 @@
             <section class="clients-box">
                 <h2>Some of our clients</h2>
                 <section class="clients">
-                    <img src="img/logo1.png" class="client" height="150" width="150" alt="logo, client 1">
-                    <img src="img/logo2.png" class="client" height="150" width="150" alt="logo, client 2">
-                    <img src="img/logo3.png" class="client" height="150" width="150" alt="logo, client 3">
+                    <img src="img/logo1.png" class="client" alt="logo, client 1">
+                    <img src="img/logo2.png" class="client" alt="logo, client 2">
+                    <img src="img/logo3.png" class="client" alt="logo, client 3">
                 </section>
             </section>
 
@@ -102,7 +103,7 @@
                         <input type="text" name="subject" placeholder="Branding..." class="input-text">
                         <span class="input-header">Message</span>
                         <!--Inspirert av textarea guide på w3schools -->
-                        <textarea type="text" name="Message" class="input-message"></textarea>
+                        <textarea type="text" width="100%" name="Message" class="input-message"></textarea>
                         <a href="" id="send-button">Send message</a>
                     </section>
 
@@ -136,7 +137,7 @@
 
 
         <footer>
-            <img src="img/logo1.png" height="100" alt="Logo of website">
+            <a href="index.html"><img src="img/logo1.png" height="100" alt="Logo of website"></a>
             <span>Companyrights Companyname 2023</span>
             <section id="sosiale-medier">
                 <a href="https://www.facebook.com/" aria-label="Facebook icon">

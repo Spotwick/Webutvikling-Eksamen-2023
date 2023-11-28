@@ -20,7 +20,8 @@
     <link rel="icon" type="image/x-icon" href="img/logo1.png">
 </head>
 <body>
-    <div id="grid-container-index">
+    <!-- Bruker en div for å holde på grid containeren til siden-->
+    <div id="grid-container">
         <header id="header">
             <section class="header-left">
                 <a href="index.html">
@@ -37,9 +38,10 @@
         </header>
         <main>
             <section class="header-movie">
-                <video autoplay muted loop class="header-media">
+                <video autoplay muted loop class="header-media" id="header-mountains">
                     <source src="img/mountains.mp4" type="video/mp4">
                 </video>
+                <img src="img/portfolio-header.jpg" alt="overview of desk" class="header-media" id="header-image">
                 <section class="movie-text">
                     <h1>Compeling headline</h1>
                     <p>
@@ -118,7 +120,7 @@
 
 
         <footer>
-            <img src="img/logo1.png" height="100" alt="Logo of website">
+            <a href="index.html"><img src="img/logo1.png" height="100" alt="Logo of website"></a>
             <span>Companyrights Companyname 2023</span>
             <section id="sosiale-medier">
                 <a href="https://www.facebook.com/" aria-label="Facebook icon">
