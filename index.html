@@ -52,12 +52,12 @@
             </nav>
         </header>
         <main>
-            <section class="header-movie">
-                <video autoplay muted loop class="header-media" id="header-mountains" itemscope itemtype="https://schema.org/VideoObject">
-                    <!-- micro data om videoen-->
-                    <meta itemprop="name" content="paragliding over mountains">
-                    <meta itemprop="uploadDate" content="2023-11-22">
-                    <meta itemprop="thumbnailUrl" content="mountains.jpg">
+            <section class="header-movie"  itemscope itemtype="https://schema.org/VideoObject">
+                <!-- micro data om videoen-->
+                <meta itemprop="name" content="paragliding over mountains">
+                <meta itemprop="uploadDate" content="2023-11-22">
+                <meta itemprop="thumbnailUrl" content="mountains.jpg">
+                <video autoplay muted loop class="header-media" id="header-mountains">
                     <source src="img/mountains.mp4" type="video/mp4">
                 </video>
                 <!-- Tom alt, fordi dekorativt bildet. legger også til aria-hidden til true -->
@@ -134,7 +134,7 @@
                 </section>
             </section>
 
-            <section class="newsletter" role="form" itemscope itemtype="http://schema.org/SubscribeAction">
+            <section class="newsletter" title="Sign up to our newsletter" itemscope itemtype="http://schema.org/SubscribeAction">
                 <h2 itemprop="name">Sign up for our newsletter</h2>
                 <input type="email" name="email" placeholder="Nora@epost.no" id="input-email" aria-label="Email for newsletter" title="Enter email address" itemprop="agent">
                 <a href="" id="signup-button" itemprop="instrument">Sign me up!</a>
